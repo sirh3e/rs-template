@@ -1,8 +1,5 @@
 name: Rust Fmt
-
-on:
-  release:
-    types: [published, created, edited]
+on: [push, pull_request]
 
 jobs:
   build:
