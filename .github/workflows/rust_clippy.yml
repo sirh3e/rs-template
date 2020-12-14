@@ -1,8 +1,5 @@
 name: Rust Clippy
-
-on:
-  release:
-    types: [published, created, edited]
+on: [push, pull_request]
 
 jobs:
   build:
