@@ -1,0 +1,17 @@
+name: Rust Clippy
+
+on:
+  release:
+    types: [published, created, edited]
+
+strategy:
+  matrix:
+    os: [ubuntu-18.04]
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run Clippy
+      run: cargo clippy -- -Dwarnings
