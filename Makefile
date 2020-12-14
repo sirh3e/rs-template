@@ -1,4 +1,6 @@
-CARGO := cargo
+BUILD_DATE	:= $(shell date "+%Y-%m-%d")
+CARGO 		:= cargo
+VERSION_TAG	:= $(shell git describe --tags 2>/dev/null || git rev-parse --short HEAD)
 
 .PHONY: all
 all: cargo-run
